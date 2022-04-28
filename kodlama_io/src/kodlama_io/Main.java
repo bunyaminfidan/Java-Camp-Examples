@@ -10,23 +10,23 @@ public class Main {
 		bunyamin.setLastName("FÝDAN");
 		bunyamin.setIdentityNumber("111111");
 		bunyamin.setEmail("bb@gmail.com");
-		bunyamin.setStudentNo(11);
+		bunyamin.setUserId(11);
 
 		Instructor engin = new Instructor();
-		engin.setId(1);
+		engin.setId(2);
 		engin.setFirstName("Engin");
 		engin.setLastName("Demirog");
 		engin.setIdentityNumber("22222");
 		engin.setEmail("ee@gmail.com");
-		engin.setInstructorNo(22);
+		engin.setUserId(22);
 
-		UserUI userUI = new UserUI();
-		userUI.registerCourseButton(bunyamin);
+		UserUI userUI = new UserUI(new StudentManager());
+		userUI.defgButton(bunyamin);
 
 		System.out.println("--------------");
 
-		InstructorUI instructorUI = new InstructorUI();
-		instructorUI.createdCourseButton(engin);
+		InstructorUI instructorUI = new InstructorUI(new InstructorManager());
+		instructorUI.abcButton(engin);
 
 	}
 

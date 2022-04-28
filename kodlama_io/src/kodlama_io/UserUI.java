@@ -2,14 +2,19 @@ package kodlama_io;
 
 public class UserUI {
 
-	StudentManager studentManager = new StudentManager();
+	StudentManager studentManager;
 
-	public void registerCourseButton(User user) {
+	public UserUI(StudentManager studentManager) {
+
+		this.studentManager = studentManager;
+	}
+
+	public void defgButton(User user) {
 
 		studentManager.add(user);
 		studentManager.update(user);
 		studentManager.delete(user);
-		studentManager.registerCourse(user);
+		studentManager.abcdegs(user);
 
 	}
 

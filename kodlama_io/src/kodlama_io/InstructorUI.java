@@ -2,16 +2,19 @@ package kodlama_io;
 
 public class InstructorUI {
 
-	InstructorManager instructorManager = new InstructorManager();
+	InstructorManager instructorManager;
 
-	StudentManager studentManager = new StudentManager();
+	public InstructorUI(InstructorManager instructorManager) {
 
-	public void createdCourseButton(User user) {
+		this.instructorManager = instructorManager;
+	}
+
+	public void abcButton(User user) {
 
 		instructorManager.add(user);
 		instructorManager.update(user);
 		instructorManager.delete(user);
-		instructorManager.createdCourse(user);
+		instructorManager.abc(user);
 
 	}
 
