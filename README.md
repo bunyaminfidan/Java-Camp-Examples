@@ -1,2 +1,2 @@
 # Java-Camp-Examples
-Java campı sırasında yapışan örnekler
+Java campı sırasında yapılan örnekler.
