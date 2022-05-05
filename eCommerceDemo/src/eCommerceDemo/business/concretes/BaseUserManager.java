@@ -47,7 +47,8 @@ public class BaseUserManager implements UserService {
 			this.registeredEmailAdresesList.add(user.getEmail());
 			PrintlnShortcut.printlnShortcut(UserAspectMessages.SuccessToBusiness);
 			userDao.add(user);
-			logService.log(UserAspectMessages.AddToSuccess + ". Size gönderilen mailde ki doðrulama linkine týklayýnýz.");
+			logService
+					.log(UserAspectMessages.AddToSuccess + ". Size gönderilen mailde ki doðrulama linkine týklayýnýz.");
 
 		}
 
@@ -82,7 +83,6 @@ public class BaseUserManager implements UserService {
 		PrintlnShortcut.printlnShortcut(UserAspectMessages.SuccessToBusiness);
 		userDao.delete(user);
 
-
 	}
 
 	@Override
@@ -90,7 +90,6 @@ public class BaseUserManager implements UserService {
 		PrintlnShortcut.printlnShortcut(UserAspectMessages.SuccessToBusiness);
 		userDao.verify(user);
 
-		
 	}
 
 }
