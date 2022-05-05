@@ -9,9 +9,11 @@ public class EmailCheck {
 	public static boolean emailNotEmpty(String email) {
 
 		if (email != "") {
+			return true;
+		}else {
 			return false;
 		}
-		return true;
+		
 
 	}
 
@@ -35,5 +37,17 @@ public class EmailCheck {
 		}
 
 	}
+	
+	public static boolean sameEmail(String registeredEmail, String enteredEmail) {
+
+		if (registeredEmail == enteredEmail) {
+
+			return true;
+		}
+
+		return false;
+	}
+	
+
 
 }

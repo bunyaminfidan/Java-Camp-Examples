@@ -34,7 +34,7 @@ public class BaseUserManager implements UserService {
 		if (!PasswordCheck.passwordCheck(user.getPassword())) {
 			PrintlnShortcut.printlnShortcut(UserAspectMessages.PasswordLength);
 			return;
-		} else if (EmailCheck.emailNotEmpty(user.getEmail())) {
+		} else if (!EmailCheck.emailNotEmpty(user.getEmail())) {
 			PrintlnShortcut.printlnShortcut(UserAspectMessages.EmailNotEmpty);
 			return;
 		} else if (!EmailCheck.emailTypeQuery(user.getEmail())) {

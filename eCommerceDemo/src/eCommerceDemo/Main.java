@@ -30,22 +30,17 @@ public class Main {
 		bunyamin.setUserId(1);
 		bunyamin.setFirstName("bb");
 		bunyamin.setLastName("bb");
-		bunyamin.setEmail("bunyaminfidan1@gmail.com");
+		bunyamin.setEmail("bunyaminfidan11@gmail.com");
 		bunyamin.setNationalityId("11111111111");
-		bunyamin.setPassword("qqqqqq1");
+		bunyamin.setPassword("123456");
 		
 		individualService.add(bunyamin);
 		individualService.verify(bunyamin);
 		
+		loginService.login(bunyamin.getEmail(), bunyamin.getPassword());
 		
 		
-		
-		
-		
-		
-		
-		
-		
+
 		
 //		Corporate buketinMarketi = new Corporate();
 //		buketinMarketi.setId(1);
@@ -55,14 +50,6 @@ public class Main {
 //		buketinMarketi.setTaxNumber(1234567);
 //		corporateService.add(buketinMarketi);
 //		corporateService.verify(buketinMarketi);
-		
-
-
-		
-		
-		
-
-
 
 	}
 
