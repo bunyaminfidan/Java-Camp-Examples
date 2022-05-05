@@ -1,11 +1,11 @@
 package eCommerceDemo;
 
-import eCommerceDemo.business.abstracts.CorporateService;
 import eCommerceDemo.business.abstracts.IndividualService;
 import eCommerceDemo.business.concretes.CorporateUserManager;
 import eCommerceDemo.business.concretes.IndividualUserManager;
 import eCommerceDemo.core.utilities.log.EmailLogManager;
 import eCommerceDemo.core.utilities.login.EmailLoginManager;
+import eCommerceDemo.core.utilities.login.GoogleLoginManagerAdapter;
 import eCommerceDemo.core.utilities.login.HibernateEmailLogin;
 import eCommerceDemo.core.utilities.login.LoginService;
 import eCommerceDemo.core.utilities.toolKits.PrintlnShortcut;
@@ -21,6 +21,7 @@ public class Main {
 		//CorporateService corporateService = new CorporateUserManager(new HibernateBaseUser(), new EmailLogManager());
 		
 		LoginService loginService = new EmailLoginManager(new HibernateEmailLogin());
+		LoginService googleLoginService = new GoogleLoginManagerAdapter();
 		
 		
 		
@@ -28,8 +29,8 @@ public class Main {
 
 		bunyamin.setId(1);
 		bunyamin.setUserId(1);
-		bunyamin.setFirstName("bb");
-		bunyamin.setLastName("bb");
+		bunyamin.setFirstName("Bunyamin");
+		bunyamin.setLastName("FÝDAN");
 		bunyamin.setEmail("bunyaminfidan11@gmail.com");
 		bunyamin.setNationalityId("11111111111");
 		bunyamin.setPassword("123456");
@@ -37,11 +38,14 @@ public class Main {
 		individualService.add(bunyamin);
 		individualService.verify(bunyamin);
 		
+		//Mail ile giriþ
 		loginService.login(bunyamin.getEmail(), bunyamin.getPassword());
+		
+		//Dýþ servis ile giriþ 
+		googleLoginService.login(bunyamin.getEmail(), bunyamin.getPassword());
 		
 		
 
-		
 //		Corporate buketinMarketi = new Corporate();
 //		buketinMarketi.setId(1);
 //		buketinMarketi.setUserId(1);
