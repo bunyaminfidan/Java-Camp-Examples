@@ -1,13 +1,13 @@
-package javacamp.hmrs;
+package test.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HmrsApplication {
+public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HmrsApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
 
 }

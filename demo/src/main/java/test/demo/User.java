@@ -1,6 +1,4 @@
-package javacamp.hmrs.entities.concretes;
-
-import java.sql.Date;
+package test.demo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,18 +10,18 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "Approves")
-public class Approve {
+@Table(name = "users")
+public class User {
 
 	@Id
 	@GeneratedValue
 	@Column(name = "id")
 	private int id;
-
-	@Column(name = "UserId")
-	private int userId;
-
-	@Column(name = "ApprovalDate")
-	private Date approvalDate;
+	
+	@Column(name = "password")
+	private String password;
+	
+	@Column(name = "email")
+	private String email;
 
 }

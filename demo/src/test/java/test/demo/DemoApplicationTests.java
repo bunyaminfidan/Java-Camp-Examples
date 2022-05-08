@@ -1,10 +1,10 @@
-package javacamp.hmrs;
+package test.demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HmrsApplicationTests {
+class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
